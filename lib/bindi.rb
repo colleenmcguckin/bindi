@@ -47,4 +47,8 @@ class Bindi
   def keys
     @redis.keys
   end
+
+  def values
+    @redis.mget @redis.keys
+  end
 end
